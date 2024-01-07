@@ -5,6 +5,8 @@ const app = express()
 const port = 3000
 
 app.get('/GetReviews/:Place_ID', (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
   const place_id = 'ChIJW_U6DczDwogRIKDr0Pdfc4c'
   const key = 'AIzaSyDPDxbfHJgcNVxNqcGUAkc2s9pgRJZ6q7I'
   const place_id_lender = 'ChIJP1-YKbDBwogRabqkOdI5j_U'
